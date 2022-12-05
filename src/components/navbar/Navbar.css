@@ -19,7 +19,7 @@ nav {
 
 }
 
-.nav-togle-btn {
+.nav-toggle-btn {
   display: none;
 }
 
@@ -37,7 +37,7 @@ nav {
   gap: 3rem;
 }
 
-.nav-links :hover {
+.nav-links a:hover {
   transition: var(--transition);
   color: var(--color-secondary);
 }
@@ -56,4 +56,55 @@ nav {
   left: calc(50% - .6rem);
   transform: rotate(45deg);
   margin-top: .9rem;
+}
+
+/* =====MEDIA QUERIES===== */
+@media screen and (max-width:1024px) {
+
+  .nav-toggle-btn {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .nav-toggle-btn svg {
+    color: var(--color-gray-100);
+  }
+
+  .nav-links {
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    top: 100%;
+    gap: 0;
+  }
+
+  .active-nav::after,
+  .active-nav {
+    display: none;
+  }
+
+  .nav-links li {
+    height: 4rem;
+    width: 100%;
+    box-shadow: -2rem 2rem 5rem rgba(0, 0, 0, .4);
+  }
+
+  .nav-links li a {
+    background-color: var(--color-primary);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem 5rem 1rem 3rem;
+  }
+
+  .show-nav {
+    display: flex;
+  }
+
+  .hide-nav {
+    display: none;
+  }
 }
