@@ -37,7 +37,7 @@ nav {
   gap: 3rem;
 }
 
-.nav-links a:hover {
+.nav-links :hover {
   transition: var(--transition);
   color: var(--color-secondary);
 }
